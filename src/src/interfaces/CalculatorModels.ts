@@ -7,5 +7,5 @@ export interface FormStates {
 
 export interface FormAction {
 	name: keyof FormStates;
-	value: string;
+	value: string | number;
 }

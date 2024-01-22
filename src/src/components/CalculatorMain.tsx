@@ -1,6 +1,9 @@
 import React, { useReducer } from 'react';
 import { FormTemplate } from './FormTemplate';
-import { deliveryCalculationResult, formReducer } from './calculatorUtils';
+import {
+	deliveryCalculationResult,
+	formReducer,
+} from '../service/calculcator-service';
 
 export const CalculatorMain = () => {
 	const [formData, setFormData] = useReducer(formReducer, {});
