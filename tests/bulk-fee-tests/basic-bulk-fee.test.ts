@@ -1,4 +1,4 @@
-import { deliveryCalculationResult } from '../../src/service/calculator-service';
+import { deliveryCalculationResult } from '../../src/services/calculator-service';
 
 describe('basic distance, 5 or more items (amountOfItems) incurs bulk fee', () => {
 	test('4 items, no surchage', () => {

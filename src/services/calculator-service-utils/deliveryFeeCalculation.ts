@@ -1,4 +1,4 @@
-import { FormStates } from '../interfaces/CalculatorModels';
+import { FormStates } from '../../interfaces/CalculatorModels';
 
 export const deliveryFeeCalculation = (
 	BASE_DELIVERY_DISTANCE: number,

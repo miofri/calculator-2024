@@ -1,3 +1,5 @@
+import { deliveryCalculationResult } from '../../src/services/calculator-service';
+
 /*
 	INPUTS FOR deliveryCalculationResult
 	cartValue?: number;
@@ -5,8 +7,6 @@
 	amountOfItems?: number;
 	orderTime?: string;
 */
-
-import { deliveryCalculationResult } from '../../src/service/calculator-service';
 
 describe('every 500m beyond 999m adds 1e', () => {
 	test('distance = 999m', () => {

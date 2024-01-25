@@ -1,4 +1,4 @@
-import { deliveryCalculationResult } from '../../src/service/calculator-service';
+import { deliveryCalculationResult } from '../../src/services/calculator-service';
 
 /*
 First 1000 meters (=1km) is 2€.

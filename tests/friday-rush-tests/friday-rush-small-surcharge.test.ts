@@ -1,4 +1,4 @@
-import { deliveryCalculationResult } from '../../src/service/calculator-service';
+import { deliveryCalculationResult } from '../../src/services/calculator-service';
 
 describe('every 500m with friday rush', () => {
 	test('distance = 999m', () => {

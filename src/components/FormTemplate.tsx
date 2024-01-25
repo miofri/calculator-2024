@@ -20,8 +20,13 @@ export const FormTemplate = ({
 			</label>
 			<input
 				className="input input-bordered input-primary w-full max-w-sm"
+				data-testid={formTitle}
 				type={formType}
-				min={formType === 'datetime-local' ? new Date().toISOString() : 1}
+				min={
+					formType === 'datetime-local'
+						? new Date().toISOString().slice(0, 16)
+						: 1
+				}
 				name={formTitle}
 				id={formTitle}
 				value={formValue}

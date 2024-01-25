@@ -1,5 +1,5 @@
 import { FormAction, FormStates } from '../interfaces/CalculatorModels';
-import { deliveryFeeCalculation } from './deliveryFeeCalculation';
+import { deliveryFeeCalculation } from './calculator-service-utils/deliveryFeeCalculation';
 
 const BASE_FEE = 2; //euros
 const MAX_FEE = 15; //euros
@@ -13,16 +13,6 @@ const BIG_BULK_SURCHARGE = 1.2; //euros
 const FREE_DELIVERY_THRESHOLD = 200; //meters
 const BASE_DELIVERY_DISTANCE = 1000; //meters
 const DELIVERY_DISTANCE_THRESHOLD = 500; //meters
-
-export const formReducer = (
-	state: FormStates,
-	action: FormAction
-): FormStates => {
-	return {
-		...state,
-		[action.name]: action.value,
-	};
-};
 
 export const deliveryCalculationResult = (formData: FormStates): number => {
 	let deliveryFee = deliveryFeeCalculation(
@@ -53,12 +43,12 @@ export const deliveryCalculationResult = (formData: FormStates): number => {
 	const isFriday = dateOfOrder.getDay() === 5;
 	const hour = dateOfOrder.getHours();
 
-	if (isFriday && hour >= 15 && hour < 19)
-		return Math.round(total * 1.2 * 10) / 10;
+	if (formData.cartValue! >= FREE_DELIVERY_THRESHOLD) return 0;
 
 	if (total > 15) return 15;
 
-	if (formData.cartValue! >= FREE_DELIVERY_THRESHOLD) return 0;
+	if (isFriday && hour >= 15 && hour < 19)
+		return Math.round(total * 1.2 * 10) / 10;
 
 	return total;
 };
