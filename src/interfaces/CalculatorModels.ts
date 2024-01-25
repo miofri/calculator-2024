@@ -1,8 +1,8 @@
 export interface FormStates {
-	cartValue?: number;
-	deliveryDistance?: number;
-	amountOfItems?: number;
-	orderTime?: string;
+	cartValue: number;
+	deliveryDistance: number;
+	amountOfItems: number;
+	orderTime: string;
 }
 
 export interface FormAction {

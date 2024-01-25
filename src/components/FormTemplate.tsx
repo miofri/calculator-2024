@@ -21,11 +21,7 @@ export const FormTemplate = ({
 			<input
 				className="input input-bordered input-primary w-full max-w-sm"
 				type={formType}
-				min={
-					formType === 'datetime-local'
-						? new Date().toISOString().substring(0, 16)
-						: undefined
-				}
+				min={formType === 'datetime-local' ? new Date().toISOString() : 1}
 				name={formTitle}
 				id={formTitle}
 				value={formValue}

@@ -1,9 +1,9 @@
 import React, { useReducer } from 'react';
 import { FormTemplate } from './FormTemplate';
 import {
-	deliveryCalculationResult,
 	formReducer,
-} from '../service/calculcator-service';
+	deliveryCalculationResult,
+} from '../service/calculator-service';
 
 export const CalculatorMain = () => {
 	const [formData, setFormData] = useReducer(formReducer, {});
@@ -14,7 +14,8 @@ export const CalculatorMain = () => {
 		deliveryCalculationResult(formData);
 	};
 
-	// ADD CHECK TO INPUT!!!!
+	// ADD CHECK TO INPUT!!!! DO NOT ALLOW TO INPUT NEGATIVE VALUES OR 0 !!!!! (use min="1" in input tag) !!!!!
+
 	return (
 		<div className="container flex flex-col items-center justify-center mx-auto h-screen w-screen ">
 			<h1 className="mb-4 font-bold text-3xl text-white">
