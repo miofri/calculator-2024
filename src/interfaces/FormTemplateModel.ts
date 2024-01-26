@@ -6,5 +6,6 @@ export interface FormTemplateModel {
 	formLabel: string;
 	formSpanLabel: string;
 	formValue: number | string;
+	formPlaceholder: string | undefined;
 	onChange: (e: { name: keyof FormStates; value: string }) => void;
 }

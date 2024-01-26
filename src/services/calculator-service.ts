@@ -1,5 +1,5 @@
 import { FormAction, FormStates } from '../interfaces/CalculatorModels';
-import { deliveryFeeCalculation } from './calculator-service-utils/deliveryFeeCalculation';
+import { deliveryFeeCalculation } from './utils/deliveryFeeCalculation';
 
 const BASE_FEE = 2; //euros
 const MAX_FEE = 15; //euros
