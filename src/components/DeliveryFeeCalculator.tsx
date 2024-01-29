@@ -4,13 +4,14 @@ import { FormStates } from '../interfaces/CalculatorModels';
 import { formReducer } from '../reducers/formReducer';
 import { checkMinIsOne } from './utils/checkMinIsOne';
 import * as Styled from '../ui-components/CalculatorUI';
-import { Forms } from './Forms';
+import { Forms } from './FormInputs';
 
 const STRINGS = {
 	TITLE: 'Delivery calculator',
 	LEGEND: 'Delivery information to be calculated',
 	BUTTON: 'Calculate delivery price',
 	PARAGRAPH: 'Delivery Fee: ',
+	CURRENCY: '€',
 };
 
 const initialState: FormStates = {
@@ -36,24 +37,24 @@ export const CalculatorMain = () => {
 	return (
 		<Styled.Container>
 			<Styled.Title>{STRINGS.TITLE}</Styled.Title>
-			<Styled.Form onSubmit={(e) => handleSubmit(e)}>
+			<Styled.Form
+				onSubmit={(e: React.FormEvent<HTMLFormElement>) => handleSubmit(e)}
+			>
 				<Styled.Fieldset>
 					<legend className="visually-hidden">{STRINGS.LEGEND}</legend>
 					<Forms formData={formData} setFormData={setFormData} />
-					<Styled.Button
-						data-test-id="submit"
-						data-testid="submit"
-						type="submit"
-					>
+					<Styled.Button data-testid="submit" type="submit">
 						{STRINGS.BUTTON}
 					</Styled.Button>
 					<Styled.Paragraph>{STRINGS.PARAGRAPH}</Styled.Paragraph>
-					<Styled.FeeContainerParagraph>
-						<Styled.FeeContainerSpan data-testid="fee">
+					<Styled.TotalFeeContainer_Paragraph>
+						<Styled.TotalFeeContainer_Span data-testid="fee">
 							{deliveryPrice}
-						</Styled.FeeContainerSpan>
-						<Styled.FeeContainerSpan>€</Styled.FeeContainerSpan>
-					</Styled.FeeContainerParagraph>
+						</Styled.TotalFeeContainer_Span>
+						<Styled.TotalFeeContainer_Span>
+							{STRINGS.CURRENCY}
+						</Styled.TotalFeeContainer_Span>
+					</Styled.TotalFeeContainer_Paragraph>
 				</Styled.Fieldset>
 			</Styled.Form>
 		</Styled.Container>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormTemplate } from './FormTemplate';
+import { FormInputTemplate } from './FormInputTemplate';
 import { FormsProps } from '../interfaces/FormProps';
 
 export const Forms: React.FC<FormsProps> = ({
@@ -8,38 +8,38 @@ export const Forms: React.FC<FormsProps> = ({
 }: FormsProps) => {
 	return (
 		<>
-			<FormTemplate
+			<FormInputTemplate
 				formType="number"
 				formTitle="cartValue"
 				formLabel="Cart value"
-				formSpanLabel="€"
+				formUnitLabel="€"
 				formValue={formData.cartValue || ''}
 				formPlaceholder='e.g. "100"'
 				onChange={setFormData}
 			/>
-			<FormTemplate
+			<FormInputTemplate
 				formType="number"
 				formTitle="deliveryDistance"
 				formLabel="Delivery distance"
-				formSpanLabel="m"
+				formUnitLabel="m"
 				formValue={formData.deliveryDistance || ''}
 				formPlaceholder='e.g. "1000"'
 				onChange={setFormData}
 			/>
-			<FormTemplate
+			<FormInputTemplate
 				formType="number"
 				formTitle="amountOfItems"
 				formLabel="Amount of items"
-				formSpanLabel=""
+				formUnitLabel=""
 				formValue={formData.amountOfItems || ''}
 				formPlaceholder='e.g. "10"'
 				onChange={setFormData}
 			/>
-			<FormTemplate
+			<FormInputTemplate
 				formType="datetime-local"
 				formTitle="orderTime"
 				formLabel="Order time"
-				formSpanLabel=""
+				formUnitLabel=""
 				formValue={formData.orderTime || ''}
 				formPlaceholder={undefined}
 				onChange={setFormData}

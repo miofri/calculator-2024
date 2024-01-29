@@ -1,9 +1,19 @@
 import styled from 'styled-components';
 
+export const Bg = styled.div`
+	width: 100vw;
+	height: 100vh;
+	background-color: ${(props) => props.theme.bodyBackground};
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+`;
+
 export const Button = styled.button`
-	background-color: #4f46e5;
+	background-color: ${(props) => props.theme.buttonPrimary};
 	width: 100%;
-	color: #ffffff;
+	color: #fff;
 	border-radius: 0.5rem;
 	padding: 0.5rem 1rem;
 	font-size: 1rem;
@@ -13,7 +23,8 @@ export const Button = styled.button`
 	transition: all 0.2s ease-in-out;
 	margin: 1rem auto;
 	&:hover {
-		background-color: #3730a3;
+		background-color: ${(props) => props.theme.buttonPrimaryHover};
+		transform: scale(1.01);
 	}
 `;
 
@@ -22,30 +33,13 @@ export const Container = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width: 100vw;
-	height: 100vh;
-	margin: 4rem auto;
-`;
-
-export const FeeContainerParagraph = styled.p`
-	display: flex;
-	flex-direction: row;
-	margin-top: 0.5rem;
-	justify-content: center;
-	align-items: center;
-	gap: 0.5rem;
-`;
-
-export const FeeContainerSpan = styled.span`
-	color: #ffffff;
-	font-size: 3rem;
-	font-weight: bold;
 `;
 
 export const Fieldset = styled.fieldset`
 	border: none;
 	padding: 0;
 	margin: 0;
+	width: 18rem;
 `;
 
 export const Form = styled.form`
@@ -55,22 +49,20 @@ export const Form = styled.form`
 	align-items: center;
 	width: 20rem;
 	height: fit-content;
-	background-color: #1f2937;
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	background-color: ${(props) => props.theme.formBackground};
+	box-shadow: ${(props) => props.theme.formBoxShadow};
 	padding: 3.5rem;
-	margin-bottom: 2rem;
 	border-radius: 1rem;
 `;
 
 export const Input = styled.input`
-	width: 16rem;
+	width: 87%;
 	padding: 0.5rem 1rem;
 	border-radius: 0.5rem;
 	border: 1px solid #6b7280;
-	background-color: #1e293b;
-	color: #a5b4fc;
+	background-color: ${(props) => props.theme.inputBackgroundColor};
+	color: ${(props) => props.theme.inputTextColor};
 	margin-bottom: 1rem;
-	margin-right: 0.5rem;
 	&:focus {
 		outline: 2px solid #4f46e5;
 		border: 1px solid #4f46e5;
@@ -79,25 +71,39 @@ export const Input = styled.input`
 
 export const Label = styled.label`
 	display: block;
-	color: #ffffff;
+	color: ${(props) => props.theme.text};
 	font-size: 1rem;
 	font-weight: bold;
 	margin-bottom: 0.5rem;
 `;
 export const Paragraph = styled.p`
 	margin: 0;
-	color: #ffffff;
+	color: ${(props) => props.theme.text};
 	font-size: 1rem;
 `;
 
 export const Span = styled.span`
-	color: #ffffff;
+	color: ${(props) => props.theme.text};
 	font-size: 1rem;
 `;
 export const Title = styled.h1`
-	margin-bottom: 2rem;
 	font-style: bold;
 	font-size: 2.25rem;
 	line-height: 1.8rem;
-	color: #ffffff;
+	color: ${(props) => props.theme.text};
+`;
+
+export const TotalFeeContainer_Paragraph = styled.p`
+	display: flex;
+	flex-direction: row;
+	margin-top: 0.5rem;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+`;
+
+export const TotalFeeContainer_Span = styled.span`
+	color: ${(props) => props.theme.text};
+	font-size: 3rem;
+	font-weight: bold;
 `;

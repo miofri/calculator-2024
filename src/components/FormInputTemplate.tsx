@@ -3,21 +3,22 @@ import { FormTemplateModel } from '../interfaces/FormTemplateModel';
 import { FormStates } from '../interfaces/CalculatorModels';
 import * as Styled from '../ui-components/CalculatorUI';
 
-export const FormTemplate = ({
+export const FormInputTemplate = ({
 	formType,
 	formTitle,
 	formLabel,
-	formSpanLabel,
+	formUnitLabel,
 	formValue,
 	formPlaceholder,
 	onChange,
 }: FormTemplateModel) => {
 	return (
 		<>
-			<Styled.Label htmlFor={formTitle}>{formLabel}</Styled.Label>
+			<Styled.Label htmlFor={formTitle}>
+				{formLabel} {formUnitLabel !== '' ? `(${formUnitLabel})` : null}
+			</Styled.Label>
 			<Styled.Input
 				data-testid={formTitle}
-				data-test-id={formTitle}
 				type={formType}
 				min={
 					formType === 'datetime-local'
@@ -36,7 +37,6 @@ export const FormTemplate = ({
 				}
 				required
 			/>
-			<Styled.Span>{formSpanLabel}</Styled.Span>
 		</>
 	);
 };
