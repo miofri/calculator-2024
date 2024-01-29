@@ -6,6 +6,13 @@ import { checkMinIsOne } from './utils/checkMinIsOne';
 import * as Styled from '../ui-components/CalculatorUI';
 import { Forms } from './Forms';
 
+const STRINGS = {
+	TITLE: 'Delivery calculator',
+	LEGEND: 'Delivery information to be calculated',
+	BUTTON: 'Calculate delivery price',
+	PARAGRAPH: 'Delivery Fee: ',
+};
+
 const initialState: FormStates = {
 	cartValue: 0,
 	deliveryDistance: 0,
@@ -28,23 +35,21 @@ export const CalculatorMain = () => {
 
 	return (
 		<Styled.Container>
-			<Styled.Title>Delivery calculator</Styled.Title>
+			<Styled.Title>{STRINGS.TITLE}</Styled.Title>
 			<Styled.Form onSubmit={(e) => handleSubmit(e)}>
 				<Styled.Fieldset>
-					<legend className="visually-hidden">
-						Delivery information to be calculated
-					</legend>
+					<legend className="visually-hidden">{STRINGS.LEGEND}</legend>
 					<Forms formData={formData} setFormData={setFormData} />
 					<Styled.Button
 						data-test-id="submit"
 						data-testid="submit"
 						type="submit"
 					>
-						Calculate delivery price
+						{STRINGS.BUTTON}
 					</Styled.Button>
-					<Styled.Paragraph>Delivery Fee: </Styled.Paragraph>
+					<Styled.Paragraph>{STRINGS.PARAGRAPH}</Styled.Paragraph>
 					<Styled.FeeContainerParagraph>
-						<Styled.FeeContainerSpan data-testid="fee" data-test-id="fee">
+						<Styled.FeeContainerSpan data-testid="fee">
 							{deliveryPrice}
 						</Styled.FeeContainerSpan>
 						<Styled.FeeContainerSpan>€</Styled.FeeContainerSpan>
