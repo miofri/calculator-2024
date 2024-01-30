@@ -53,6 +53,7 @@ export const CalculatorMain = () => {
 							dark_mode
 						</Styled.ThemeToggler>
 					</Styled.TitleContainer>
+
 					<Styled.Form
 						data-testid="form"
 						onSubmit={(e: React.FormEvent<HTMLFormElement>) => handleSubmit(e)}
@@ -63,6 +64,7 @@ export const CalculatorMain = () => {
 							<Styled.Button data-testid="submit" type="submit">
 								{STRINGS.BUTTON}
 							</Styled.Button>
+
 							<Styled.Paragraph>{STRINGS.PARAGRAPH}</Styled.Paragraph>
 							<Styled.TotalFeeContainer>
 								<Styled.TotalFeeContainer_Span data-testid="fee">

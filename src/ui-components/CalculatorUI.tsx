@@ -52,6 +52,9 @@ export const Fieldset = styled.fieldset`
 	border: none;
 `;
 
+/**
+ * Container for the form, including the submit button as well as the delivery fee.
+ */
 export const Form = styled.form`
 	display: flex;
 	flex-direction: column;
@@ -136,6 +139,9 @@ export const Title = styled.h1`
 	}
 `;
 
+/**
+ * Container for the title and the theme toggler.
+ */
 export const TitleContainer = styled.div`
 	display: grid;
 	grid-template-columns: 1fr 4fr 1fr;
