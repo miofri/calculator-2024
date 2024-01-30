@@ -12,6 +12,7 @@ export const FlexStyle = styled.div`
  * Container for the whole page, including the background color.
  */
 export const BodyContainer = styled(FlexStyle)`
+	transition: all 0.5s ease; // transition for the theme toggler
 	width: 100%;
 	height: 100%;
 	min-height: 100vh;
