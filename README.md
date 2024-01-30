@@ -1,5 +1,5 @@
-# Delivery calculator 
-![image](https://github.com/miofri/wolt-2024/assets/74725778/1e4e76a9-cbfc-4a57-b786-5c186a432893)
+# Delivery calculator
+![image](./assets/calculator.png)
 
 Wolt Summer 2024 Engineering Internships Take-home assignment. </br>
 A delivery calculator that adheres to specific conditions laid in [this](https://github.com/woltapp/engineering-internship-2024?tab=readme-ov-file#specification) repository.
@@ -9,7 +9,7 @@ A delivery calculator that adheres to specific conditions laid in [this](https:/
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
 
- 
+
 ## How to use
 ### `npm start`
 
