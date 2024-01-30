@@ -5,7 +5,7 @@ import { formReducer } from '../reducers/formReducer';
 import * as Styled from '../ui-components/CalculatorUI';
 import { Forms } from './FormInputs';
 import { ThemeProvider } from 'styled-components';
-import { darkStyledTheme, lightStyledTheme } from '../styles/theme';
+import { darkStyledTheme, lightStyledTheme } from '../ui-components/theme';
 
 const STRINGS = {
 	TITLE: 'Delivery calculator',
