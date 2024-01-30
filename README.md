@@ -2,15 +2,16 @@
 ![image](./assets/calculator.png)
 
 ### Table of contents
-- [Introduction](#wolt-summer-2024-engineering-internships-take-home-assignment-)
-- [Tools](#built-with)
+- [Introduction](#introduction)
+- [Built with](#built-with)
 - [Project structure](#project-structure)
 - [Prerequisites](#prerequisites)
 - [How to use](#how-to-use)
 - [Acknowledgement](#acknowledgement)
 - [Demo](#demo)
 
-## Wolt Summer 2024 Engineering Internships Take-home assignment.
+## Introduction
+### Wolt Summer 2024 Engineering Internships Take-home assignment.
 A delivery calculator that adheres to specific conditions laid in [this](https://github.com/woltapp/engineering-internship-2024?tab=readme-ov-file#specification) repository. </br>
 The calculator takes several inputs: the value of the cart in Euro, delivery distance, amount of items, as well as time of order. Based on the specification linked above, it will calculate the delivery fee. The app also features a dark/light theme toggle.
 
