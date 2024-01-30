@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Bg = styled.div`
+export const BodyBackground = styled.div`
 	width: 100vw;
 	height: 100vh;
 	background-color: ${(props) => props.theme.bodyBackground};
@@ -86,11 +86,27 @@ export const Span = styled.span`
 	color: ${(props) => props.theme.text};
 	font-size: 1rem;
 `;
+
+export const ThemeToggler = styled(Button)`
+	width: fit-content;
+	padding: 0.5rem 1rem;
+	grid-area: button;
+`;
+
 export const Title = styled.h1`
 	font-style: bold;
 	font-size: 2.25rem;
 	line-height: 1.8rem;
 	color: ${(props) => props.theme.text};
+	width: fit-content;
+	grid-area: title;
+`;
+
+export const TitleContainer = styled.div`
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 6fr 1fr;
+	grid-template-areas: 'empty title button';
 `;
 
 export const TotalFeeContainer_Paragraph = styled.p`
