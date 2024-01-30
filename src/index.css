@@ -9,16 +9,22 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 
+	height: 100%;
+	width: 100%;
 	margin: 0;
-	height: 100vh;
-	color-scheme: dark;
-	/*background-color: #111827;*/
+	padding: 0;
 }
 
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 		monospace;
 }
+
+html {
+	height: 100%;
+	width: 100%;
+}
+
 .visually-hidden {
 	position: absolute;
 	width: 1px;
