@@ -1,14 +1,17 @@
 import styled from 'styled-components';
 import { device } from './breakpoints';
 
-/**
- * Container for the whole page, including the background color.
- */
-export const BodyContainer = styled.div`
+export const FlexStyle = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+`;
+
+/**
+ * Container for the whole page, including the background color.
+ */
+export const BodyContainer = styled(FlexStyle)`
 	width: 100%;
 	height: 100%;
 	min-height: 100vh;
@@ -37,12 +40,14 @@ export const Button = styled.button`
 
 /**
  * Container for the calculator, including the title, theme toggler, and the form.
+ * Currently empty, but can be used for future styling purposes.
  */
-export const CalculatorContainer = styled.div`
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+export const CalculatorContainer = styled(FlexStyle)``;
+
+export const Credits = styled.a`
+	margin-top: 1rem;
+	font-size: 0.7rem;
+	color: #9ca3af;
 `;
 
 export const Fieldset = styled.fieldset`

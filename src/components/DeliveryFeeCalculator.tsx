@@ -77,6 +77,12 @@ export const CalculatorMain = () => {
 						</Styled.Fieldset>
 					</Styled.Form>
 				</Styled.CalculatorContainer>
+				<Styled.Credits
+					href="https://www.flaticon.com/free-icons/calculator"
+					title="calculator icons"
+				>
+					Site logo {'('}calculator{')'} created by Rahul Kaklotar - Flaticon
+				</Styled.Credits>
 			</Styled.BodyContainer>
 		</ThemeProvider>
 	);
