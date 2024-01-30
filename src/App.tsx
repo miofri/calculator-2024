@@ -1,5 +1,5 @@
-import './App.css';
-import { CalculatorMain } from './components/CalculatorMain';
+import React from 'react';
+import { CalculatorMain } from './components/DeliveryFeeCalculator';
 
 function App() {
 	return <CalculatorMain />;

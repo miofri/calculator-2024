@@ -1,25 +1,23 @@
 import React from 'react';
 import { FormTemplateModel } from '../interfaces/FormTemplateModel';
 import { FormStates } from '../interfaces/CalculatorModels';
+import * as Styled from '../ui-components/CalculatorUI';
 
-export const FormTemplate = ({
+export const FormInputTemplate = ({
 	formType,
 	formTitle,
 	formLabel,
-	formSpanLabel,
+	formUnitLabel,
 	formValue,
+	formPlaceholder,
 	onChange,
 }: FormTemplateModel) => {
 	return (
-		<div className="mb-4">
-			<label
-				htmlFor={formTitle}
-				className="block text-white text-sm font-bold mb-2"
-			>
-				{formLabel}
-			</label>
-			<input
-				className="input input-bordered input-primary w-full max-w-sm"
+		<>
+			<Styled.Label htmlFor={formTitle}>
+				{formLabel} {formUnitLabel !== '' ? `(${formUnitLabel})` : null}
+			</Styled.Label>
+			<Styled.Input
 				data-testid={formTitle}
 				type={formType}
 				min={
@@ -30,6 +28,7 @@ export const FormTemplate = ({
 				name={formTitle}
 				id={formTitle}
 				value={formValue}
+				placeholder={formPlaceholder}
 				onChange={(e) =>
 					onChange({
 						name: formTitle as keyof FormStates,
@@ -38,7 +37,6 @@ export const FormTemplate = ({
 				}
 				required
 			/>
-			<span className="ml-3">{formSpanLabel}</span>
-		</div>
+		</>
 	);
 };
