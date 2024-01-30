@@ -1,7 +1,7 @@
 /* eslint-disable no-mixed-spaces-and-tabs */
 import { FormStates } from '../../interfaces/CalculatorModels';
 
-export const deliveryFeeCalculation = (
+export const distanceFeeCalculation = (
 	BASE_DELIVERY_DISTANCE: number,
 	BASE_FEE: number,
 	DELIVERY_DISTANCE_THRESHOLD: number,

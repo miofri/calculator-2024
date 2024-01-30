@@ -1,39 +1,44 @@
 import styled from 'styled-components';
 import { device } from './breakpoints';
 
-export const BodyBackground = styled.div`
-	width: 100%;
-	height: 100%;
-	min-height: 100vh;
-	background-color: ${(props) => props.theme.bodyBackground};
+/**
+ * Container for the whole page, including the background color.
+ */
+export const BodyContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	width: 100%;
+	height: 100%;
+	min-height: 100vh;
+	background-color: ${(props) => props.theme.bodyBackground};
+	color-scheme: ${(props) => props.theme.colorScheme};
 `;
 
 export const Button = styled.button`
-	background-color: ${(props) => props.theme.buttonPrimary};
 	width: 100%;
-	color: #fff;
-	border-radius: 0.5rem;
+	margin: 1rem auto;
 	padding: 0.5rem 1rem;
+	background-color: ${(props) => props.theme.buttonPrimary};
+	color: #fff;
 	font-size: 1rem;
 	line-height: 1.5rem;
 	border: none;
+	border-radius: 0.5rem;
 	cursor: pointer;
 	transition: all 0.2s ease-in-out;
-	margin: 1rem auto;
+
 	&:hover {
 		background-color: ${(props) => props.theme.buttonPrimaryHover};
 		transform: scale(1.01);
 	}
-
-	@media ${device.sm} {
-	}
 `;
 
-export const Container = styled.div`
+/**
+ * Container for the calculator, including the title, theme toggler, and the form.
+ */
+export const CalculatorContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -41,10 +46,10 @@ export const Container = styled.div`
 `;
 
 export const Fieldset = styled.fieldset`
-	border: none;
-	padding: 0;
-	margin: 0;
 	width: 18rem;
+	margin: 0;
+	padding: 0;
+	border: none;
 `;
 
 export const Form = styled.form`
@@ -75,12 +80,13 @@ export const Form = styled.form`
 
 export const Input = styled.input`
 	width: 87%;
+	margin-bottom: 1rem;
 	padding: 0.5rem 1rem;
-	border-radius: 0.5rem;
-	border: 1px solid #6b7280;
 	background-color: ${(props) => props.theme.inputBackgroundColor};
 	color: ${(props) => props.theme.inputTextColor};
-	margin-bottom: 1rem;
+	border-radius: 0.5rem;
+	border: 1px solid #6b7280;
+
 	&:focus {
 		outline: 2px solid #4f46e5;
 		border: 1px solid #4f46e5;
@@ -89,10 +95,10 @@ export const Input = styled.input`
 
 export const Label = styled.label`
 	display: block;
+	margin-bottom: 0.5rem;
 	color: ${(props) => props.theme.text};
 	font-size: 1rem;
 	font-weight: bold;
-	margin-bottom: 0.5rem;
 `;
 export const Paragraph = styled.p`
 	margin: 0;
@@ -116,11 +122,11 @@ export const ThemeToggler = styled(Button)`
 `;
 
 export const Title = styled.h1`
+	grid-area: title;
+	width: fit-content;
+	color: ${(props) => props.theme.text};
 	font-size: 1.6rem;
 	line-height: 1.8rem;
-	color: ${(props) => props.theme.text};
-	width: fit-content;
-	grid-area: title;
 
 	@media ${device.sm} {
 		font-size: 1.8rem;
@@ -131,17 +137,19 @@ export const Title = styled.h1`
 `;
 
 export const TitleContainer = styled.div`
-	width: 100%;
 	display: grid;
 	grid-template-columns: 1fr 4fr 1fr;
 	grid-template-areas: 'empty title button';
+	width: 100%;
 
 	@media ${device.xl} {
-			grid-template-columns: 1fr 6fr 1fr;
-		}
+		grid-template-columns: 1fr 6fr 1fr;
 	}
 `;
 
+/**
+ * Container for "Delivery Fee: " and the total fee.
+ */
 export const TotalFeeContainer = styled.div`
 	display: flex;
 	flex-direction: row;

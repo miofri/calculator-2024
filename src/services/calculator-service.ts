@@ -1,5 +1,5 @@
 import { FormStates } from '../interfaces/CalculatorModels';
-import { deliveryFeeCalculation } from './utils/deliveryFeeCalculation';
+import { distanceFeeCalculation } from './utils/distanceFeeCalculation';
 
 const BASE_FEE = 2; //euros
 const MAX_FEE = 15; //euros
@@ -15,7 +15,7 @@ const BASE_DELIVERY_DISTANCE = 1000; //meters
 const DELIVERY_DISTANCE_THRESHOLD = 500; //meters
 
 export const deliveryCalculationResult = (formData: FormStates): number => {
-	const deliveryFee = deliveryFeeCalculation(
+	const distanceBasedFee = distanceFeeCalculation(
 		BASE_DELIVERY_DISTANCE,
 		BASE_FEE,
 		DELIVERY_DISTANCE_THRESHOLD,
@@ -37,7 +37,7 @@ export const deliveryCalculationResult = (formData: FormStates): number => {
 		bulkSurcharge = bulkSurcharge + BIG_BULK_SURCHARGE_FEE;
 	}
 
-	const total = deliveryFee + cartValueSurcharge + bulkSurcharge;
+	const total = distanceBasedFee + cartValueSurcharge + bulkSurcharge;
 
 	const dateOfOrder = new Date(formData.orderTime!);
 	const isFriday = dateOfOrder.getDay() === 5;

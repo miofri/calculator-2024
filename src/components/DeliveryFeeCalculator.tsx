@@ -2,7 +2,6 @@ import React, { useReducer } from 'react';
 import { deliveryCalculationResult } from '../services/calculator-service';
 import { FormStates } from '../interfaces/CalculatorModels';
 import { formReducer } from '../reducers/formReducer';
-import { checkMinIsOne } from './utils/checkMinIsOne';
 import * as Styled from '../ui-components/CalculatorUI';
 import { Forms } from './FormInputs';
 import { ThemeProvider } from 'styled-components';
@@ -25,30 +24,29 @@ const initialState: FormStates = {
 
 export const CalculatorMain = () => {
 	const [formData, setFormData] = useReducer(formReducer, initialState);
-	const [deliveryPrice, setDeliveryPrice] = React.useState(0);
-	const [pageColorTheme, setPageColorTheme] = React.useState('dark');
+	const [deliveryPrice, setDeliveryPrice] = React.useState<number>(0);
+	const [pageColorTheme, setPageColorTheme] = React.useState<'dark' | 'light'>(
+		'dark'
+	);
 
 	const handleThemeToggle = () => {
 		setPageColorTheme(pageColorTheme === 'dark' ? 'light' : 'dark');
 	};
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-		if (checkMinIsOne(formData)) {
-			return;
-		} else {
-			setDeliveryPrice(deliveryCalculationResult(formData));
-		}
+		setDeliveryPrice(deliveryCalculationResult(formData));
 	};
 
 	return (
 		<ThemeProvider
 			theme={pageColorTheme === 'dark' ? darkStyledTheme : lightStyledTheme}
 		>
-			<Styled.BodyBackground>
-				<Styled.Container>
+			<Styled.BodyContainer data-testid="body-container">
+				<Styled.CalculatorContainer>
 					<Styled.TitleContainer>
 						<Styled.Title>{STRINGS.TITLE}</Styled.Title>{' '}
 						<Styled.ThemeToggler
+							data-testid="theme-toggler"
 							className="material-symbols-outlined"
 							onClick={() => handleThemeToggle()}
 						>
@@ -56,6 +54,7 @@ export const CalculatorMain = () => {
 						</Styled.ThemeToggler>
 					</Styled.TitleContainer>
 					<Styled.Form
+						data-testid="form"
 						onSubmit={(e: React.FormEvent<HTMLFormElement>) => handleSubmit(e)}
 					>
 						<Styled.Fieldset>
@@ -75,8 +74,8 @@ export const CalculatorMain = () => {
 							</Styled.TotalFeeContainer>
 						</Styled.Fieldset>
 					</Styled.Form>
-				</Styled.Container>
-			</Styled.BodyBackground>
+				</Styled.CalculatorContainer>
+			</Styled.BodyContainer>
 		</ThemeProvider>
 	);
 };
