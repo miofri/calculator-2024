@@ -22,7 +22,7 @@ const initialState: FormStates = {
 	orderTime: '',
 };
 
-export const CalculatorMain = () => {
+export const DeliveryFeeCalculator = () => {
 	const [formData, setFormData] = useReducer(formReducer, initialState);
 	const [deliveryPrice, setDeliveryPrice] = React.useState<number>(0);
 	const [pageColorTheme, setPageColorTheme] = React.useState<'dark' | 'light'>(
@@ -41,12 +41,12 @@ export const CalculatorMain = () => {
 		<ThemeProvider
 			theme={pageColorTheme === 'dark' ? darkStyledTheme : lightStyledTheme}
 		>
-			<Styled.BodyContainer data-testid="body-container">
+			<Styled.BodyContainer data-test-id="body-container">
 				<Styled.CalculatorContainer>
 					<Styled.TitleContainer>
 						<Styled.Title>{STRINGS.TITLE}</Styled.Title>{' '}
 						<Styled.ThemeToggler
-							data-testid="theme-toggler"
+							data-test-id="theme-toggler"
 							className="material-symbols-outlined"
 							onClick={() => handleThemeToggle()}
 						>
@@ -55,19 +55,19 @@ export const CalculatorMain = () => {
 					</Styled.TitleContainer>
 
 					<Styled.Form
-						data-testid="form"
+						data-test-id="form"
 						onSubmit={(e: React.FormEvent<HTMLFormElement>) => handleSubmit(e)}
 					>
 						<Styled.Fieldset>
 							<legend className="visually-hidden">{STRINGS.LEGEND}</legend>
 							<Forms formData={formData} setFormData={setFormData} />
-							<Styled.Button data-testid="submit" type="submit">
+							<Styled.Button data-test-id="submit" type="submit">
 								{STRINGS.BUTTON}
 							</Styled.Button>
 
 							<Styled.Paragraph>{STRINGS.PARAGRAPH}</Styled.Paragraph>
 							<Styled.TotalFeeContainer>
-								<Styled.TotalFeeContainer_Span data-testid="fee">
+								<Styled.TotalFeeContainer_Span data-test-id="fee">
 									{deliveryPrice}
 								</Styled.TotalFeeContainer_Span>
 								<Styled.TotalFeeContainer_Span>

@@ -28,13 +28,9 @@ export const FormInputTemplate = ({
 				{formLabel} {formUnitLabel !== '' ? `(${formUnitLabel})` : null}
 			</Styled.Label>
 			<Styled.Input
-				data-testid={formTitle}
+				data-test-id={formTitle}
 				id={formTitle}
-				min={
-					formType === 'datetime-local'
-						? new Date().toISOString().slice(0, 16)
-						: 1
-				}
+				min={formType === 'datetime-local' ? undefined : 1}
 				name={formTitle}
 				placeholder={formPlaceholder}
 				step={stepValues[formTitle] || undefined}
