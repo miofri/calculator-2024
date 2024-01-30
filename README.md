@@ -1,8 +1,15 @@
-# WOLT DELIVERY CALCULATOR
-![TypeScript](https://img.shields.io/badge/TypeScript-v.4-green)
-![React](https://img.shields.io/badge/React-v.18-blue)
-![StyledComponents](https://img.shields.io/badge/StyledComponents-v.6-pink)
+# Delivery calculator 
+![image](https://github.com/miofri/wolt-2024/assets/74725778/1e4e76a9-cbfc-4a57-b786-5c186a432893)
 
+Wolt Summer 2024 Engineering Internships Take-home assignment. </br>
+A delivery calculator that adheres to specific conditions laid in [this](https://github.com/woltapp/engineering-internship-2024?tab=readme-ov-file#specification) repository.
+
+## Built with
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
+
+ 
 ## How to use
 ### `npm start`
 
