@@ -65,14 +65,14 @@ export const CalculatorMain = () => {
 								{STRINGS.BUTTON}
 							</Styled.Button>
 							<Styled.Paragraph>{STRINGS.PARAGRAPH}</Styled.Paragraph>
-							<Styled.TotalFeeContainer_Paragraph>
+							<Styled.TotalFeeContainer>
 								<Styled.TotalFeeContainer_Span data-testid="fee">
 									{deliveryPrice}
 								</Styled.TotalFeeContainer_Span>
 								<Styled.TotalFeeContainer_Span>
 									{STRINGS.CURRENCY}
 								</Styled.TotalFeeContainer_Span>
-							</Styled.TotalFeeContainer_Paragraph>
+							</Styled.TotalFeeContainer>
 						</Styled.Fieldset>
 					</Styled.Form>
 				</Styled.Container>

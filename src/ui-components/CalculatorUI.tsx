@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from './breakpoints';
 
 export const BodyBackground = styled.div`
 	width: 100%;
@@ -27,6 +28,9 @@ export const Button = styled.button`
 		background-color: ${(props) => props.theme.buttonPrimaryHover};
 		transform: scale(1.01);
 	}
+
+	@media ${device.sm} {
+	}
 `;
 
 export const Container = styled.div`
@@ -48,12 +52,25 @@ export const Form = styled.form`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width: 20rem;
+	width: 14rem;
 	height: fit-content;
 	background-color: ${(props) => props.theme.formBackground};
 	box-shadow: ${(props) => props.theme.formBoxShadow};
-	padding: 3.5rem;
+	padding: 3.5rem 3.5rem 2rem 3.5rem;
 	border-radius: 1rem;
+
+	@media ${device.xs} {
+		width: 14rem;
+	}
+	@media ${device.sm} {
+		width: 16rem;
+	}
+	@media ${device.md} {
+		width: 18rem;
+	}
+	@media ${device.xxl} {
+		width: 20rem;
+	}
 `;
 
 export const Input = styled.input`
@@ -90,30 +107,46 @@ export const Span = styled.span`
 
 export const ThemeToggler = styled(Button)`
 	width: fit-content;
-	padding: 0.5rem 1rem;
+	padding: 0.2rem 0.6rem;
 	grid-area: button;
+
+	@media ${device.xl} {
+		padding: 0.5rem 1rem;
+	}
 `;
 
 export const Title = styled.h1`
-	font-style: bold;
-	font-size: 2.25rem;
+	font-size: 1.6rem;
 	line-height: 1.8rem;
 	color: ${(props) => props.theme.text};
 	width: fit-content;
 	grid-area: title;
+
+	@media ${device.sm} {
+		font-size: 1.8rem;
+	}
+	@media ${device.xl} {
+		font-size: 2rem;
+	}
 `;
 
 export const TitleContainer = styled.div`
 	width: 100%;
 	display: grid;
-	grid-template-columns: 1fr 6fr 1fr;
+	grid-template-columns: 1fr 4fr 1fr;
 	grid-template-areas: 'empty title button';
+
+	@media ${device.xl} {
+			grid-template-columns: 1fr 6fr 1fr;
+		}
+	}
 `;
 
-export const TotalFeeContainer_Paragraph = styled.p`
+export const TotalFeeContainer = styled.div`
 	display: flex;
 	flex-direction: row;
 	margin-top: 0.5rem;
+	margin-bottom: 0;
 	justify-content: center;
 	align-items: center;
 	gap: 0.5rem;
