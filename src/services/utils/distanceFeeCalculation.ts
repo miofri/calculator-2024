@@ -10,7 +10,7 @@ export const distanceFeeCalculation = (
 	BASE_FEE: number,
 	DELIVERY_DISTANCE_THRESHOLD: number,
 	MAX_FEE: number,
-	deliveryDistance: FormStates['deliveryDistance']
+	deliveryDistance: FormStates['deliveryDistance'],
 ): number => {
 	let deliveryFee =
 		deliveryDistance <= BASE_DELIVERY_DISTANCE
@@ -18,7 +18,7 @@ export const distanceFeeCalculation = (
 			: BASE_FEE +
 			  Math.ceil(
 					(deliveryDistance - BASE_DELIVERY_DISTANCE) /
-						DELIVERY_DISTANCE_THRESHOLD
+						DELIVERY_DISTANCE_THRESHOLD,
 			  );
 
 	if (deliveryFee > MAX_FEE) {

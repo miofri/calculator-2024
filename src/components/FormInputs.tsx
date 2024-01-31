@@ -1,6 +1,7 @@
 import React from 'react';
+
 import { FormInputTemplate } from './FormInputTemplate';
-import { FormsPropsModel } from '../interfaces/FormPropsModel';
+import { FormsPropsModel } from '../interfaces/formPropsModel';
 
 /**
  * Renders several FormInputTemplate components with different props/inputs,

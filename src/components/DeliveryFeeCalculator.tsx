@@ -1,10 +1,11 @@
 import React, { useReducer } from 'react';
+import { ThemeProvider } from 'styled-components';
+
 import { deliveryCalculationResult } from '../services/calculator-service';
 import { FormStates } from '../interfaces/formDataModel';
 import { formReducer } from '../reducers/formReducer';
 import * as Styled from '../ui-components/CalculatorUI';
 import { Forms } from './FormInputs';
-import { ThemeProvider } from 'styled-components';
 import { darkStyledTheme, lightStyledTheme } from '../ui-components/theme';
 
 const STRINGS = {
@@ -26,7 +27,7 @@ export const DeliveryFeeCalculator = () => {
 	const [formData, setFormData] = useReducer(formReducer, initialState);
 	const [deliveryPrice, setDeliveryPrice] = React.useState<number>(0);
 	const [pageColorTheme, setPageColorTheme] = React.useState<'dark' | 'light'>(
-		'dark'
+		'dark',
 	);
 
 	const handleThemeToggle = () => {

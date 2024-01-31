@@ -23,7 +23,7 @@ export const deliveryCalculationResult = (formData: FormStates): number => {
 		BASE_FEE,
 		DELIVERY_DISTANCE_THRESHOLD,
 		MAX_FEE,
-		formData.deliveryDistance
+		formData.deliveryDistance,
 	);
 
 	const cartValueSurcharge =

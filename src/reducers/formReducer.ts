@@ -6,7 +6,7 @@ import { FormStates, FormAction } from '../interfaces/formDataModel';
  */
 export const formReducer = (
 	state: FormStates,
-	action: FormAction
+	action: FormAction,
 ): FormStates => {
 	return {
 		...state,

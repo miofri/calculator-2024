@@ -1,5 +1,6 @@
 import React from 'react';
-import { FormTemplateModel } from '../interfaces/FormTemplateModel';
+
+import { FormTemplateModel } from '../interfaces/formTemplateModel';
 import { FormStates } from '../interfaces/formDataModel';
 import * as Styled from '../ui-components/CalculatorUI';
 
