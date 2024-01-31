@@ -3,7 +3,7 @@ import 'jest-styled-components';
 import { render, fireEvent } from '@testing-library/react';
 import { DeliveryFeeCalculator } from '../../src/components/DeliveryFeeCalculator';
 
-describe('toggling theme', () => {
+describe('theme toggler button test', () => {
 	let container: HTMLElement | null;
 	let bodyContainer: Element | null;
 	let form: Element | null;

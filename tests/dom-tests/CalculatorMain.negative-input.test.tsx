@@ -3,6 +3,11 @@ import 'jest-styled-components';
 import { render, fireEvent } from '@testing-library/react';
 import { DeliveryFeeCalculator } from '../../src/components/DeliveryFeeCalculator';
 
+/**
+ * For the following test, I do not want the calculator to do anything if input value is invalid.
+ * Naturally, the input field already has a min value and a check on type of input, but in case of
+ * Dom manipulation, I want to make sure that the calculator does not do anything if the input is invalid.
+ */
 describe('inputing negative values into each field', () => {
 	let container: HTMLElement | null;
 	let cartValueInput: Element | null;

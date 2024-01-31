@@ -49,6 +49,8 @@ For this assingmnet, I decided to go with styled-components as it fits with Reac
 - Styled Components
 - Jest for testing
 
+npm install should handle everything perfectly, but here are some additional instructions if needed.
+
 ```
 # Install TypeScript (Please cd to the directory)
 npm install --save typescript @types/node @types/react @types/react-dom @types/jest
