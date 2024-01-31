@@ -87,5 +87,5 @@ Some elements, like the color palettes, as well as boxshadows, have been taken f
 
 ## Demo
 
-<a href="https://gyazo.com/90275c06ab22b0838ba445dc448bb527"><img src="https://i.gyazo.com/90275c06ab22b0838ba445dc448bb527.gif" alt="Image from Gyazo" width="420"/></a>
-<a href="https://gyazo.com/29f3ddb33d47b293831f1e6daa2b7a32"><img src="https://i.gyazo.com/29f3ddb33d47b293831f1e6daa2b7a32.gif" alt="Image from Gyazo" width="420"/></a>
+<a href="https://gyazo.com/f4b1d622407ebbe3846df40e8dc914c7"><img src="https://i.gyazo.com/f4b1d622407ebbe3846df40e8dc914c7.gif" alt="Image from Gyazo" width="420"/></a>
+<a href="https://gyazo.com/c7a353811247f23585c02bdea5bf389e"><img src="https://i.gyazo.com/c7a353811247f23585c02bdea5bf389e.gif" alt="Image from Gyazo" width="632"/></a>
