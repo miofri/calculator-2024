@@ -1,4 +1,4 @@
-import { FormStates } from './CalculatorModels';
+import { FormStates } from './formDataModel';
 
 export interface FormTemplateModel {
 	formType: string;

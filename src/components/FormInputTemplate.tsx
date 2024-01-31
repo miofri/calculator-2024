@@ -1,6 +1,6 @@
 import React from 'react';
 import { FormTemplateModel } from '../interfaces/FormTemplateModel';
-import { FormStates } from '../interfaces/CalculatorModels';
+import { FormStates } from '../interfaces/formDataModel';
 import * as Styled from '../ui-components/CalculatorUI';
 
 export const FormInputTemplate = ({
@@ -12,10 +12,7 @@ export const FormInputTemplate = ({
 	formPlaceholder,
 	onChange,
 }: FormTemplateModel) => {
-	/**
-	 * Defines the expected step for each input types.
-	 * cartValue, which expects a currency, has a step of 0.01.
-	 */
+	// Defines the expected step for each input types. cartValue (currency) has a step of 0.01.
 	const stepValues: { [key: string]: number } = {
 		cartValue: 0.01,
 		deliveryDistance: 1,

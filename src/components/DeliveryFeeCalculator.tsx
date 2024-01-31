@@ -1,6 +1,6 @@
 import React, { useReducer } from 'react';
 import { deliveryCalculationResult } from '../services/calculator-service';
-import { FormStates } from '../interfaces/CalculatorModels';
+import { FormStates } from '../interfaces/formDataModel';
 import { formReducer } from '../reducers/formReducer';
 import * as Styled from '../ui-components/CalculatorUI';
 import { Forms } from './FormInputs';

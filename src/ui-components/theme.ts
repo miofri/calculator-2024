@@ -1,3 +1,6 @@
+/**
+ * styles for dark and light theme, used by ThemeProvider's theme property.
+ */
 export const darkStyledTheme = {
 	bodyBackground: '#111827',
 	buttonPrimary: '#4f46e5',

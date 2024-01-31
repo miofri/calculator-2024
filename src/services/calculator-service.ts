@@ -1,4 +1,4 @@
-import { FormStates } from '../interfaces/CalculatorModels';
+import { FormStates } from '../interfaces/formDataModel';
 import { distanceFeeCalculation } from './utils/distanceFeeCalculation';
 
 const BASE_FEE = 2; //euros
@@ -14,6 +14,9 @@ const FREE_DELIVERY_DISTANCE_THRESHOLD = 200; //meters
 const BASE_DELIVERY_DISTANCE = 1000; //meters
 const DELIVERY_DISTANCE_THRESHOLD = 500; //meters
 
+/**
+ * Calculates delivery fee based on formData, which stores the inputs from the form.
+ */
 export const deliveryCalculationResult = (formData: FormStates): number => {
 	const distanceBasedFee = distanceFeeCalculation(
 		BASE_DELIVERY_DISTANCE,
@@ -43,14 +46,16 @@ export const deliveryCalculationResult = (formData: FormStates): number => {
 	const isFriday = dateOfOrder.getDay() === 5;
 	const hour = dateOfOrder.getHours();
 
-	if (formData.cartValue! >= FREE_DELIVERY_DISTANCE_THRESHOLD) return 0;
-
+	if (formData.cartValue! >= FREE_DELIVERY_DISTANCE_THRESHOLD) {
+		return 0;
+	}
 	if (isFriday && hour >= 15 && hour < 19) {
 		const finalTotal = Math.round(total * 1.2 * 10) / 10;
 		return finalTotal > MAX_FEE ? MAX_FEE : finalTotal;
 	}
-
-	if (total > 15) return 15;
+	if (total > 15) {
+		return 15;
+	}
 
 	return total;
 };

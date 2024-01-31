@@ -1,11 +1,16 @@
 import React from 'react';
 import { FormInputTemplate } from './FormInputTemplate';
-import { FormsProps } from '../interfaces/FormProps';
+import { FormsPropsModel } from '../interfaces/FormPropsModel';
 
-export const Forms: React.FC<FormsProps> = ({
+/**
+ * Renders several FormInputTemplate components with different props/inputs,
+ * and manage the state of formData.
+ * Each input is saved to to formData on change with setFormData.
+ */
+export const Forms: React.FC<FormsPropsModel> = ({
 	formData,
 	setFormData,
-}: FormsProps) => {
+}: FormsPropsModel) => {
 	return (
 		<>
 			<FormInputTemplate
