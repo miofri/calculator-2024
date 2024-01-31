@@ -6,7 +6,7 @@ describe('every 500m with friday rush', () => {
 			deliveryCalculationResult({
 				cartValue: 12,
 				deliveryDistance: 999,
-				amountOfItems: 1,
+				numberOfItems: 1,
 				orderTime: '2024-01-26T15:00',
 			}),
 		).toBe(2.4);
@@ -16,7 +16,7 @@ describe('every 500m with friday rush', () => {
 			deliveryCalculationResult({
 				cartValue: 12,
 				deliveryDistance: 1000,
-				amountOfItems: 1,
+				numberOfItems: 1,
 				orderTime: '2024-01-26T16:00',
 			}),
 		).toBe(2.4);
@@ -26,7 +26,7 @@ describe('every 500m with friday rush', () => {
 			deliveryCalculationResult({
 				cartValue: 12,
 				deliveryDistance: 1499,
-				amountOfItems: 1,
+				numberOfItems: 1,
 				orderTime: '2024-01-26T17:00',
 			}),
 		).toBe(3.6);
@@ -36,7 +36,7 @@ describe('every 500m with friday rush', () => {
 			deliveryCalculationResult({
 				cartValue: 12,
 				deliveryDistance: 1500,
-				amountOfItems: 1,
+				numberOfItems: 1,
 				orderTime: '2024-01-26T18:00',
 			}),
 		).toBe(3.6);
@@ -46,7 +46,7 @@ describe('every 500m with friday rush', () => {
 			deliveryCalculationResult({
 				cartValue: 12,
 				deliveryDistance: 1501,
-				amountOfItems: 1,
+				numberOfItems: 1,
 				orderTime: '2024-01-26T18:59',
 			}),
 		).toBe(4.8);
@@ -56,7 +56,7 @@ describe('every 500m with friday rush', () => {
 			deliveryCalculationResult({
 				cartValue: 12,
 				deliveryDistance: 1501,
-				amountOfItems: 1,
+				numberOfItems: 1,
 				orderTime: '2024-01-26T19:00',
 			}),
 		).toBe(4);

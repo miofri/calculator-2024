@@ -4,7 +4,7 @@ import { deliveryCalculationResult } from '../../src/services/calculator-service
 	INPUTS FOR deliveryCalculationResult
 	cartValue?: number;
 	deliveryDistance?: number;
-	amountOfItems?: number;
+	numberOfItems?: number;
 	orderTime?: string;
 */
 
@@ -14,7 +14,7 @@ describe('every 500m beyond 999m adds 1e', () => {
 			deliveryCalculationResult({
 				cartValue: 12,
 				deliveryDistance: 999,
-				amountOfItems: 1,
+				numberOfItems: 1,
 				orderTime: '2024-01-24T09:27',
 			}),
 		).toBe(2);
@@ -24,7 +24,7 @@ describe('every 500m beyond 999m adds 1e', () => {
 			deliveryCalculationResult({
 				cartValue: 12,
 				deliveryDistance: 1000,
-				amountOfItems: 1,
+				numberOfItems: 1,
 				orderTime: '2024-01-24T09:27',
 			}),
 		).toBe(2);
@@ -34,7 +34,7 @@ describe('every 500m beyond 999m adds 1e', () => {
 			deliveryCalculationResult({
 				cartValue: 12,
 				deliveryDistance: 1499,
-				amountOfItems: 1,
+				numberOfItems: 1,
 				orderTime: '2024-01-24T09:27',
 			}),
 		).toBe(3);
@@ -44,7 +44,7 @@ describe('every 500m beyond 999m adds 1e', () => {
 			deliveryCalculationResult({
 				cartValue: 12,
 				deliveryDistance: 1500,
-				amountOfItems: 1,
+				numberOfItems: 1,
 				orderTime: '2024-01-24T09:27',
 			}),
 		).toBe(3);
@@ -54,7 +54,7 @@ describe('every 500m beyond 999m adds 1e', () => {
 			deliveryCalculationResult({
 				cartValue: 12,
 				deliveryDistance: 1501,
-				amountOfItems: 1,
+				numberOfItems: 1,
 				orderTime: '2024-01-24T09:27',
 			}),
 		).toBe(4);
@@ -64,7 +64,7 @@ describe('every 500m beyond 999m adds 1e', () => {
 			deliveryCalculationResult({
 				cartValue: 12,
 				deliveryDistance: 50000,
-				amountOfItems: 1,
+				numberOfItems: 1,
 				orderTime: '2024-01-24T09:27',
 			}),
 		).toBe(15);

@@ -7,7 +7,7 @@ describe('inputing negative values into each field', () => {
 	let container: HTMLElement | null;
 	let cartValueInput: Element | null;
 	let deliveryDistanceInput: Element | null;
-	let amountOfItemsInput: Element | null;
+	let numberOfItemsInput: Element | null;
 	let orderTimeInput: Element | null;
 	let fee: Element | null;
 	let submitButton: Element | null;
@@ -15,8 +15,8 @@ describe('inputing negative values into each field', () => {
 	beforeEach(() => {
 		container = render(<DeliveryFeeCalculator />).container;
 
-		amountOfItemsInput = container.querySelector(
-			'[data-test-id="amountOfItems"]',
+		numberOfItemsInput = container.querySelector(
+			'[data-test-id="numberOfItems"]',
 		);
 		cartValueInput = container.querySelector('[data-test-id="cartValue"]');
 		deliveryDistanceInput = container.querySelector(
@@ -26,7 +26,7 @@ describe('inputing negative values into each field', () => {
 		orderTimeInput = container.querySelector('[data-test-id="orderTime"]');
 		submitButton = container.querySelector('[data-test-id="submit"]');
 		if (
-			!amountOfItemsInput ||
+			!numberOfItemsInput ||
 			!cartValueInput ||
 			!deliveryDistanceInput ||
 			!fee ||
@@ -44,7 +44,7 @@ describe('inputing negative values into each field', () => {
 		fireEvent.change(deliveryDistanceInput!, {
 			target: { value: '999' },
 		});
-		fireEvent.change(amountOfItemsInput!, { target: { value: '12' } });
+		fireEvent.change(numberOfItemsInput!, { target: { value: '12' } });
 		fireEvent.change(orderTimeInput!, {
 			target: { value: '2024-01-25T19:41:29+0000' },
 		});
@@ -59,7 +59,7 @@ describe('inputing negative values into each field', () => {
 		fireEvent.change(deliveryDistanceInput!, {
 			target: { value: '999' },
 		});
-		fireEvent.change(amountOfItemsInput!, { target: { value: '12' } });
+		fireEvent.change(numberOfItemsInput!, { target: { value: '12' } });
 		fireEvent.change(orderTimeInput!, {
 			target: { value: '2024-01-25T19:41:29+0000' },
 		});
@@ -74,7 +74,7 @@ describe('inputing negative values into each field', () => {
 		fireEvent.change(deliveryDistanceInput!, {
 			target: { value: '-1' },
 		});
-		fireEvent.change(amountOfItemsInput!, {
+		fireEvent.change(numberOfItemsInput!, {
 			target: { value: '12' },
 		});
 		fireEvent.change(orderTimeInput!, {
@@ -91,7 +91,7 @@ describe('inputing negative values into each field', () => {
 		fireEvent.change(deliveryDistanceInput!, {
 			target: { value: '999' },
 		});
-		fireEvent.change(amountOfItemsInput!, {
+		fireEvent.change(numberOfItemsInput!, {
 			target: { value: '-1' },
 		});
 		fireEvent.change(orderTimeInput!, {
@@ -108,7 +108,7 @@ describe('inputing negative values into each field', () => {
 		fireEvent.change(deliveryDistanceInput!, {
 			target: { value: '999' },
 		});
-		fireEvent.change(amountOfItemsInput!, {
+		fireEvent.change(numberOfItemsInput!, {
 			target: { value: '12' },
 		});
 		fireEvent.change(orderTimeInput!, {

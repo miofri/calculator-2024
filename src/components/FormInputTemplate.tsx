@@ -13,11 +13,18 @@ export const FormInputTemplate = ({
 	formPlaceholder,
 	onChange,
 }: FormTemplateModel) => {
-	// Defines the expected step for each input types. cartValue (currency) has a step of 0.01.
+	// Defines the expected step for each input types.
 	const stepValues: { [key: string]: number } = {
 		cartValue: 0.01,
 		deliveryDistance: 1,
-		amountOfItems: 1,
+		numberOfItems: 1,
+	};
+
+	const inputFieldTitle: { [key: string]: string } = {
+		cartValue: "Please enter the cart's value",
+		deliveryDistance: 'Please enter the delivery distance',
+		numberOfItems: 'Please enter the number of items',
+		orderTime: 'Please enter the order time',
 	};
 
 	return (
@@ -32,6 +39,7 @@ export const FormInputTemplate = ({
 				name={formTitle}
 				placeholder={formPlaceholder}
 				step={stepValues[formTitle] || undefined}
+				title={inputFieldTitle[formTitle]}
 				type={formType}
 				value={formValue}
 				onChange={(e) =>

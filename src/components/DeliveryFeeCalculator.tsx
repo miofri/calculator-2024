@@ -19,7 +19,7 @@ const STRINGS = {
 const initialState: FormStates = {
 	cartValue: 0,
 	deliveryDistance: 0,
-	amountOfItems: 0,
+	numberOfItems: 0,
 	orderTime: '',
 };
 
@@ -49,6 +49,7 @@ export const DeliveryFeeCalculator = () => {
 						<Styled.ThemeToggler
 							data-test-id="theme-toggler"
 							className="material-symbols-outlined"
+							title="Toggle theme"
 							onClick={() => handleThemeToggle()}
 						>
 							dark_mode
@@ -62,7 +63,11 @@ export const DeliveryFeeCalculator = () => {
 						<Styled.Fieldset>
 							<legend className="visually-hidden">{STRINGS.LEGEND}</legend>
 							<Forms formData={formData} setFormData={setFormData} />
-							<Styled.Button data-test-id="submit" type="submit">
+							<Styled.Button
+								data-test-id="submit"
+								title="Calculate delivery price"
+								type="submit"
+							>
 								{STRINGS.BUTTON}
 							</Styled.Button>
 

@@ -6,7 +6,7 @@ describe('basic distance, 5 or more items incurs bulk fee', () => {
 			deliveryCalculationResult({
 				cartValue: 10,
 				deliveryDistance: 999,
-				amountOfItems: 4,
+				numberOfItems: 4,
 				orderTime: '2024-01-24T09:27',
 			}),
 		).toBe(2);
@@ -16,7 +16,7 @@ describe('basic distance, 5 or more items incurs bulk fee', () => {
 			deliveryCalculationResult({
 				cartValue: 10,
 				deliveryDistance: 1000,
-				amountOfItems: 5,
+				numberOfItems: 5,
 				orderTime: '2024-01-24T09:27',
 			}),
 		).toBe(2.5);
@@ -26,7 +26,7 @@ describe('basic distance, 5 or more items incurs bulk fee', () => {
 			deliveryCalculationResult({
 				cartValue: 10,
 				deliveryDistance: 1499,
-				amountOfItems: 10,
+				numberOfItems: 10,
 				orderTime: '2024-01-24T09:27',
 			}),
 		).toBe(6);
@@ -36,7 +36,7 @@ describe('basic distance, 5 or more items incurs bulk fee', () => {
 			deliveryCalculationResult({
 				cartValue: 10,
 				deliveryDistance: 1500,
-				amountOfItems: 13,
+				numberOfItems: 13,
 				orderTime: '2024-01-24T09:27',
 			}),
 		).toBe(8.7);
@@ -46,7 +46,7 @@ describe('basic distance, 5 or more items incurs bulk fee', () => {
 			deliveryCalculationResult({
 				cartValue: 10,
 				deliveryDistance: 1501,
-				amountOfItems: 14,
+				numberOfItems: 14,
 				orderTime: '2024-01-24T09:27',
 			}),
 		).toBe(10.2);
@@ -56,7 +56,7 @@ describe('basic distance, 5 or more items incurs bulk fee', () => {
 			deliveryCalculationResult({
 				cartValue: 10,
 				deliveryDistance: 50000,
-				amountOfItems: 14,
+				numberOfItems: 14,
 				orderTime: '2024-01-24T09:27',
 			}),
 		).toBe(15);

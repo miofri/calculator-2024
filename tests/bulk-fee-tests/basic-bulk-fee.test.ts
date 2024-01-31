@@ -1,12 +1,12 @@
 import { deliveryCalculationResult } from '../../src/services/calculator-service';
 
-describe('basic distance, 5 or more items (amountOfItems) incurs bulk fee', () => {
+describe('basic distance, 5 or more items (numberOfItems) incurs bulk fee', () => {
 	test('4 items, no surchage', () => {
 		expect(
 			deliveryCalculationResult({
 				cartValue: 10,
 				deliveryDistance: 1000,
-				amountOfItems: 4,
+				numberOfItems: 4,
 				orderTime: '2024-01-24T09:27',
 			}),
 		).toBe(2);
@@ -16,7 +16,7 @@ describe('basic distance, 5 or more items (amountOfItems) incurs bulk fee', () =
 			deliveryCalculationResult({
 				cartValue: 10,
 				deliveryDistance: 1000,
-				amountOfItems: 5,
+				numberOfItems: 5,
 				orderTime: '2024-01-24T09:27',
 			}),
 		).toBe(2.5);
@@ -26,7 +26,7 @@ describe('basic distance, 5 or more items (amountOfItems) incurs bulk fee', () =
 			deliveryCalculationResult({
 				cartValue: 10,
 				deliveryDistance: 1000,
-				amountOfItems: 10,
+				numberOfItems: 10,
 				orderTime: '2024-01-24T09:27',
 			}),
 		).toBe(5);
@@ -36,7 +36,7 @@ describe('basic distance, 5 or more items (amountOfItems) incurs bulk fee', () =
 			deliveryCalculationResult({
 				cartValue: 10,
 				deliveryDistance: 1000,
-				amountOfItems: 13,
+				numberOfItems: 13,
 				orderTime: '2024-01-24T09:27',
 			}),
 		).toBe(7.7);
@@ -46,7 +46,7 @@ describe('basic distance, 5 or more items (amountOfItems) incurs bulk fee', () =
 			deliveryCalculationResult({
 				cartValue: 10,
 				deliveryDistance: 1000,
-				amountOfItems: 14,
+				numberOfItems: 14,
 				orderTime: '2024-01-24T09:27',
 			}),
 		).toBe(8.2);

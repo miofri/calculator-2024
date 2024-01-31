@@ -16,7 +16,7 @@ describe('every 500 with small order surcharge', () => {
 			deliveryCalculationResult({
 				cartValue: 1,
 				deliveryDistance: 999,
-				amountOfItems: 1,
+				numberOfItems: 1,
 				orderTime: '2024-01-24T09:27',
 			}),
 		).toBe(11);
@@ -27,7 +27,7 @@ describe('every 500 with small order surcharge', () => {
 			deliveryCalculationResult({
 				cartValue: 4,
 				deliveryDistance: 1000,
-				amountOfItems: 1,
+				numberOfItems: 1,
 				orderTime: '2024-01-24T09:27',
 			}),
 		).toBe(8);
@@ -38,7 +38,7 @@ describe('every 500 with small order surcharge', () => {
 			deliveryCalculationResult({
 				cartValue: 5,
 				deliveryDistance: 1499,
-				amountOfItems: 1,
+				numberOfItems: 1,
 				orderTime: '2024-01-24T09:27',
 			}),
 		).toBe(8);
@@ -49,7 +49,7 @@ describe('every 500 with small order surcharge', () => {
 			deliveryCalculationResult({
 				cartValue: 7,
 				deliveryDistance: 1499,
-				amountOfItems: 1,
+				numberOfItems: 1,
 				orderTime: '2024-01-24T09:27',
 			}),
 		).toBe(6);
@@ -60,7 +60,7 @@ describe('every 500 with small order surcharge', () => {
 			deliveryCalculationResult({
 				cartValue: 9,
 				deliveryDistance: 1501,
-				amountOfItems: 1,
+				numberOfItems: 1,
 				orderTime: '2024-01-24T09:27',
 			}),
 		).toBe(5);
@@ -71,7 +71,7 @@ describe('every 500 with small order surcharge', () => {
 			deliveryCalculationResult({
 				cartValue: 9,
 				deliveryDistance: 50000,
-				amountOfItems: 1,
+				numberOfItems: 1,
 				orderTime: '2024-01-24T09:27',
 			}),
 		).toBe(15);

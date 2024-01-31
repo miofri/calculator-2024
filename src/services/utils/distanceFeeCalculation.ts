@@ -16,10 +16,10 @@ export const distanceFeeCalculation = (
 		deliveryDistance <= BASE_DELIVERY_DISTANCE
 			? BASE_FEE
 			: BASE_FEE +
-			  Math.ceil(
+				Math.ceil(
 					(deliveryDistance - BASE_DELIVERY_DISTANCE) /
 						DELIVERY_DISTANCE_THRESHOLD,
-			  );
+				);
 
 	if (deliveryFee > MAX_FEE) {
 		deliveryFee = MAX_FEE;

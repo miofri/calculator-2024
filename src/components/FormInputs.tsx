@@ -34,10 +34,10 @@ export const Forms: React.FC<FormsPropsModel> = ({
 			/>
 			<FormInputTemplate
 				formType="number"
-				formTitle="amountOfItems"
-				formLabel="Amount of items"
+				formTitle="numberOfItems"
+				formLabel="Number of items"
 				formUnitLabel=""
-				formValue={formData.amountOfItems || ''}
+				formValue={formData.numberOfItems || ''}
 				formPlaceholder='e.g. "10"'
 				onChange={setFormData}
 			/>

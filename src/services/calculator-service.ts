@@ -32,11 +32,11 @@ export const deliveryCalculationResult = (formData: FormStates): number => {
 			: 0;
 
 	let bulkSurcharge =
-		formData.amountOfItems < BULK_ITEM_THRESHOLD
+		formData.numberOfItems < BULK_ITEM_THRESHOLD
 			? 0
-			: (formData.amountOfItems - 4) * BULK_SURCHARGE_FEE;
+			: (formData.numberOfItems - 4) * BULK_SURCHARGE_FEE;
 
-	if (formData.amountOfItems > BIG_BULK_ITEM_THRESHOLD) {
+	if (formData.numberOfItems > BIG_BULK_ITEM_THRESHOLD) {
 		bulkSurcharge = bulkSurcharge + BIG_BULK_SURCHARGE_FEE;
 	}
 
