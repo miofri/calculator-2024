@@ -28,7 +28,7 @@ export const FormInputTemplate = ({
 			<Styled.Input
 				data-test-id={formTitle}
 				id={formTitle}
-				min={formType === 'datetime-local' ? undefined : 1}
+				min={stepValues[formTitle] || undefined}
 				name={formTitle}
 				placeholder={formPlaceholder}
 				step={stepValues[formTitle] || undefined}

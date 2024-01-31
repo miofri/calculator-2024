@@ -50,7 +50,7 @@ export const deliveryCalculationResult = (formData: FormStates): number => {
 		return 0;
 	}
 	if (isFriday && hour >= 15 && hour < 19) {
-		const finalTotal = Math.round(total * 1.2 * 10) / 10;
+		const finalTotal = Math.round(total * 1.2 * 100) / 100;
 		return finalTotal > MAX_FEE ? MAX_FEE : finalTotal;
 	}
 	if (total > 15) {
