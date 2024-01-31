@@ -14,7 +14,7 @@ describe('toggling theme', () => {
 		bodyContainer = container.querySelector('[data-test-id="body-container"]');
 		form = container.querySelector('[data-test-id="form"]');
 		themeTogglerButton = container.querySelector(
-			'[data-test-id="theme-toggler"]'
+			'[data-test-id="theme-toggler"]',
 		);
 	});
 

@@ -18,7 +18,7 @@ describe('every 500 with small order surcharge', () => {
 				deliveryDistance: 999,
 				amountOfItems: 1,
 				orderTime: '2024-01-24T09:27',
-			})
+			}),
 		).toBe(11);
 	});
 	test('distance = 1000m', () => {
@@ -29,7 +29,7 @@ describe('every 500 with small order surcharge', () => {
 				deliveryDistance: 1000,
 				amountOfItems: 1,
 				orderTime: '2024-01-24T09:27',
-			})
+			}),
 		).toBe(8);
 	});
 	test('distance = 1499m', () => {
@@ -40,7 +40,7 @@ describe('every 500 with small order surcharge', () => {
 				deliveryDistance: 1499,
 				amountOfItems: 1,
 				orderTime: '2024-01-24T09:27',
-			})
+			}),
 		).toBe(8);
 	});
 	test('distance = 1500m', () => {
@@ -51,7 +51,7 @@ describe('every 500 with small order surcharge', () => {
 				deliveryDistance: 1499,
 				amountOfItems: 1,
 				orderTime: '2024-01-24T09:27',
-			})
+			}),
 		).toBe(6);
 	});
 	test('distance = 1501m', () => {
@@ -62,7 +62,7 @@ describe('every 500 with small order surcharge', () => {
 				deliveryDistance: 1501,
 				amountOfItems: 1,
 				orderTime: '2024-01-24T09:27',
-			})
+			}),
 		).toBe(5);
 	});
 	test('distance = 50000m, shouldnt be more than 15e', () => {
@@ -73,7 +73,7 @@ describe('every 500 with small order surcharge', () => {
 				deliveryDistance: 50000,
 				amountOfItems: 1,
 				orderTime: '2024-01-24T09:27',
-			})
+			}),
 		).toBe(15);
 	});
 });

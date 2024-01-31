@@ -16,11 +16,11 @@ describe('inputing negative values into each field', () => {
 		container = render(<DeliveryFeeCalculator />).container;
 
 		amountOfItemsInput = container.querySelector(
-			'[data-test-id="amountOfItems"]'
+			'[data-test-id="amountOfItems"]',
 		);
 		cartValueInput = container.querySelector('[data-test-id="cartValue"]');
 		deliveryDistanceInput = container.querySelector(
-			'[data-test-id="deliveryDistance"]'
+			'[data-test-id="deliveryDistance"]',
 		);
 		fee = container.querySelector('[data-test-id="fee"]');
 		orderTimeInput = container.querySelector('[data-test-id="orderTime"]');

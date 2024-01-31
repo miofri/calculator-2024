@@ -9,7 +9,7 @@ describe('every 500m with friday rush', () => {
 				deliveryDistance: 999,
 				amountOfItems: 1,
 				orderTime: '2024-01-26T15:00',
-			})
+			}),
 		).toBe(13.2);
 	});
 	test('distance = 1000m', () => {
@@ -20,7 +20,7 @@ describe('every 500m with friday rush', () => {
 				deliveryDistance: 1000,
 				amountOfItems: 1,
 				orderTime: '2024-01-26T16:00',
-			})
+			}),
 		).toBe(9.6);
 	});
 	test('distance = 1499m', () => {
@@ -31,7 +31,7 @@ describe('every 500m with friday rush', () => {
 				deliveryDistance: 1499,
 				amountOfItems: 1,
 				orderTime: '2024-01-26T17:00',
-			})
+			}),
 		).toBe(7.2);
 	});
 	test('distance = 1500m', () => {
@@ -42,7 +42,7 @@ describe('every 500m with friday rush', () => {
 				deliveryDistance: 1500,
 				amountOfItems: 1,
 				orderTime: '2024-01-26T18:00',
-			})
+			}),
 		).toBe(4.8);
 	});
 	test('distance = 1501m', () => {
@@ -53,7 +53,7 @@ describe('every 500m with friday rush', () => {
 				deliveryDistance: 1501,
 				amountOfItems: 1,
 				orderTime: '2024-01-26T18:59',
-			})
+			}),
 		).toBe(14.4);
 	});
 	test('distance = 35000m', () => {
@@ -64,7 +64,7 @@ describe('every 500m with friday rush', () => {
 				deliveryDistance: 35000,
 				amountOfItems: 1,
 				orderTime: '2024-01-26T19:00',
-			})
+			}),
 		).toBe(15);
 	});
 });
