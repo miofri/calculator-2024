@@ -72,6 +72,10 @@ npm install styled-components
 
 ## How to use
 
+### `npm install`
+
+Installs all required dependencies.
+
 ### `npm start`
 
 Runs the app in the development mode.\
