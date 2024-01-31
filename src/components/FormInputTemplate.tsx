@@ -46,6 +46,7 @@ export const FormInputTemplate = ({
 					onChange({
 						name: formTitle as keyof FormStates,
 						value: e.target.value,
+						type: 'UPDATE',
 					})
 				}
 				required

@@ -21,6 +21,7 @@ const initialState: FormStates = {
 	deliveryDistance: 0,
 	numberOfItems: 0,
 	orderTime: '',
+	reset: null,
 };
 
 export const DeliveryFeeCalculator = () => {
@@ -36,6 +37,10 @@ export const DeliveryFeeCalculator = () => {
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		setDeliveryPrice(deliveryCalculationResult(formData));
+	};
+	const handleClearForm = () => {
+		setFormData({ type: 'RESET', name: 'reset', value: '' });
+		setDeliveryPrice(0);
 	};
 
 	return (
@@ -63,6 +68,12 @@ export const DeliveryFeeCalculator = () => {
 						<Styled.Fieldset>
 							<legend className="visually-hidden">{STRINGS.LEGEND}</legend>
 							<Forms formData={formData} setFormData={setFormData} />
+							<Styled.ClearButton
+								onClick={handleClearForm}
+								data-test-id="clear-button"
+							>
+								Clear form
+							</Styled.ClearButton>
 							<Styled.Button
 								data-test-id="submit"
 								title="Calculate delivery price"
@@ -70,7 +81,6 @@ export const DeliveryFeeCalculator = () => {
 							>
 								{STRINGS.BUTTON}
 							</Styled.Button>
-
 							<Styled.Paragraph>{STRINGS.PARAGRAPH}</Styled.Paragraph>
 							<Styled.TotalFeeContainer>
 								<Styled.TotalFeeContainer_Span data-test-id="fee">

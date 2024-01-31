@@ -46,6 +46,21 @@ export const Button = styled.button`
  */
 export const CalculatorContainer = styled(FlexStyle)``;
 
+export const ClearButton = styled(Button)`
+	position: relative;
+	padding: 0;
+	margin: 0;
+	width: fit-content;
+	margin-left: 14rem;
+	color: ${(props) => props.theme.inputTextColor};
+	font-size: 0.8rem;
+	text-decoration: underline;
+	background-color: transparent;
+	&:hover {
+		background-color: transparent;
+		color: ${(props) => props.theme.text};
+	}
+`;
 export const Credits = styled.a`
 	margin-top: 1rem;
 	font-size: 0.7rem;

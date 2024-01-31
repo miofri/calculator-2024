@@ -7,5 +7,9 @@ export interface FormTemplateModel {
 	formUnitLabel: string;
 	formValue: number | string;
 	formPlaceholder: string | undefined;
-	onChange: (e: { name: keyof FormStates; value: string }) => void;
+	onChange: (e: {
+		name: keyof FormStates;
+		value: string;
+		type: string;
+	}) => void;
 }

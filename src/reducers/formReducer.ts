@@ -8,8 +8,21 @@ export const formReducer = (
 	state: FormStates,
 	action: FormAction,
 ): FormStates => {
-	return {
-		...state,
-		[action.name]: action.value,
-	};
+	switch (action.type) {
+		case 'UPDATE':
+			return {
+				...state,
+				[action.name]: action.value,
+			};
+		case 'RESET':
+			return {
+				cartValue: 0,
+				deliveryDistance: 0,
+				numberOfItems: 0,
+				orderTime: '',
+				reset: null,
+			};
+		default:
+			throw new Error(`Unhandled action type: ${action.type}`);
+	}
 };
