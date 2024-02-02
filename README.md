@@ -21,6 +21,8 @@ The calculator takes several inputs: the value of the cart in Euro, delivery dis
 
 For this assingmnet, I decided to go with styled-components as it fits with React's component-based approach. I like how it's reusable and modular, just like a React component. It's also pretty fun to write.
 
+Live at [sk-delivery-calc.vercel.app](https://sk-delivery-calc.vercel.app)
+
 ## Built with
 
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
