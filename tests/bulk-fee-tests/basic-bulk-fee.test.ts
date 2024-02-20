@@ -8,6 +8,7 @@ describe('basic distance, 5 or more items (numberOfItems) incurs bulk fee', () =
 				deliveryDistance: 1000,
 				numberOfItems: 4,
 				orderTime: '2024-01-24T09:27',
+				reset: null,
 			}),
 		).toBe(2);
 	});
@@ -18,6 +19,7 @@ describe('basic distance, 5 or more items (numberOfItems) incurs bulk fee', () =
 				deliveryDistance: 1000,
 				numberOfItems: 5,
 				orderTime: '2024-01-24T09:27',
+				reset: null,
 			}),
 		).toBe(2.5);
 	});
@@ -28,6 +30,7 @@ describe('basic distance, 5 or more items (numberOfItems) incurs bulk fee', () =
 				deliveryDistance: 1000,
 				numberOfItems: 10,
 				orderTime: '2024-01-24T09:27',
+				reset: null,
 			}),
 		).toBe(5);
 	});
@@ -38,6 +41,7 @@ describe('basic distance, 5 or more items (numberOfItems) incurs bulk fee', () =
 				deliveryDistance: 1000,
 				numberOfItems: 13,
 				orderTime: '2024-01-24T09:27',
+				reset: null,
 			}),
 		).toBe(7.7);
 	});
@@ -48,6 +52,7 @@ describe('basic distance, 5 or more items (numberOfItems) incurs bulk fee', () =
 				deliveryDistance: 1000,
 				numberOfItems: 14,
 				orderTime: '2024-01-24T09:27',
+				reset: null,
 			}),
 		).toBe(8.2);
 	});

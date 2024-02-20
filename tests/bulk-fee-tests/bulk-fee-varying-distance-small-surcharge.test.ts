@@ -8,6 +8,7 @@ describe('varying distance, 5 or more items incurs bulk fee', () => {
 				deliveryDistance: 999,
 				numberOfItems: 4,
 				orderTime: '2024-01-24T09:27',
+				reset: null,
 			}),
 		).toBe(3);
 	});
@@ -18,6 +19,7 @@ describe('varying distance, 5 or more items incurs bulk fee', () => {
 				deliveryDistance: 1000,
 				numberOfItems: 5,
 				orderTime: '2024-01-24T09:27',
+				reset: null,
 			}),
 		).toBe(4.5);
 	});
@@ -28,6 +30,7 @@ describe('varying distance, 5 or more items incurs bulk fee', () => {
 				deliveryDistance: 1499,
 				numberOfItems: 10,
 				orderTime: '2024-01-24T09:27',
+				reset: null,
 			}),
 		).toBe(9);
 	});
@@ -38,6 +41,7 @@ describe('varying distance, 5 or more items incurs bulk fee', () => {
 				deliveryDistance: 1500,
 				numberOfItems: 13,
 				orderTime: '2024-01-24T09:27',
+				reset: null,
 			}),
 		).toBe(12.7);
 	});
@@ -48,6 +52,7 @@ describe('varying distance, 5 or more items incurs bulk fee', () => {
 				deliveryDistance: 1501,
 				numberOfItems: 14,
 				orderTime: '2024-01-24T09:27',
+				reset: null,
 			}),
 		).toBe(15);
 	});
@@ -58,6 +63,7 @@ describe('varying distance, 5 or more items incurs bulk fee', () => {
 				deliveryDistance: 50000,
 				numberOfItems: 14,
 				orderTime: '2024-01-24T09:27',
+				reset: null,
 			}),
 		).toBe(15);
 	});

@@ -8,6 +8,7 @@ describe('every 500 with small order surcharge', () => {
 				deliveryDistance: 999,
 				numberOfItems: 1,
 				orderTime: '2024-01-24T09:27',
+				reset: null,
 			}),
 		).toBe(2);
 	});
@@ -18,6 +19,7 @@ describe('every 500 with small order surcharge', () => {
 				deliveryDistance: 1000,
 				numberOfItems: 1,
 				orderTime: '2024-01-24T09:27',
+				reset: null,
 			}),
 		).toBe(0);
 	});
@@ -28,6 +30,7 @@ describe('every 500 with small order surcharge', () => {
 				deliveryDistance: 1499,
 				numberOfItems: 1,
 				orderTime: '2024-01-24T09:27',
+				reset: null,
 			}),
 		).toBe(0);
 	});
@@ -38,6 +41,7 @@ describe('every 500 with small order surcharge', () => {
 				deliveryDistance: 1499,
 				numberOfItems: 1,
 				orderTime: '2024-01-24T09:27',
+				reset: null,
 			}),
 		).toBe(3);
 	});
@@ -48,6 +52,7 @@ describe('every 500 with small order surcharge', () => {
 				deliveryDistance: 1501,
 				numberOfItems: 1,
 				orderTime: '2024-01-24T09:27',
+				reset: null,
 			}),
 		).toBe(0);
 	});
@@ -58,6 +63,7 @@ describe('every 500 with small order surcharge', () => {
 				deliveryDistance: 50000,
 				numberOfItems: 1,
 				orderTime: '2024-01-24T09:27',
+				reset: null,
 			}),
 		).toBe(0);
 	});

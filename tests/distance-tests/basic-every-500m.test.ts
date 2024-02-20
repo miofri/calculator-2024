@@ -16,6 +16,7 @@ describe('every 500m beyond 999m adds 1e', () => {
 				deliveryDistance: 999,
 				numberOfItems: 1,
 				orderTime: '2024-01-24T09:27',
+				reset: null,
 			}),
 		).toBe(2);
 	});
@@ -26,6 +27,7 @@ describe('every 500m beyond 999m adds 1e', () => {
 				deliveryDistance: 1000,
 				numberOfItems: 1,
 				orderTime: '2024-01-24T09:27',
+				reset: null,
 			}),
 		).toBe(2);
 	});
@@ -36,6 +38,7 @@ describe('every 500m beyond 999m adds 1e', () => {
 				deliveryDistance: 1499,
 				numberOfItems: 1,
 				orderTime: '2024-01-24T09:27',
+				reset: null,
 			}),
 		).toBe(3);
 	});
@@ -46,6 +49,7 @@ describe('every 500m beyond 999m adds 1e', () => {
 				deliveryDistance: 1500,
 				numberOfItems: 1,
 				orderTime: '2024-01-24T09:27',
+				reset: null,
 			}),
 		).toBe(3);
 	});
@@ -56,6 +60,7 @@ describe('every 500m beyond 999m adds 1e', () => {
 				deliveryDistance: 1501,
 				numberOfItems: 1,
 				orderTime: '2024-01-24T09:27',
+				reset: null,
 			}),
 		).toBe(4);
 	});
@@ -66,6 +71,7 @@ describe('every 500m beyond 999m adds 1e', () => {
 				deliveryDistance: 50000,
 				numberOfItems: 1,
 				orderTime: '2024-01-24T09:27',
+				reset: null,
 			}),
 		).toBe(15);
 	});
