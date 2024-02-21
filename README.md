@@ -14,12 +14,12 @@
 
 ## Introduction
 
-### Wolt Summer 2024 Engineering Internships Take-home assignment.
+### Summer 2024 Engineering Internships Take-home assignment.
 
 A delivery calculator that adheres to specific conditions laid in [this](https://github.com/woltapp/engineering-internship-2024?tab=readme-ov-file#specification) repository. </br>
 The calculator takes several inputs: the value of the cart in Euro, delivery distance, amount of items, as well as time of order. Based on the specification linked above, it will calculate the delivery fee. The app also features a dark/light theme toggle.
 
-For this assingmnet, I decided to go with styled-components as it fits with React's component-based approach. I like how it's reusable and modular, just like a React component. It's also pretty fun to write.
+For this assignment, I decided to go with styled-components as it fits with React's component-based approach. I like how it's reusable and modular, just like a React component. It's also pretty fun to write.
 
 Live at [sk-delivery-calc.vercel.app](https://sk-delivery-calc.vercel.app)
 
